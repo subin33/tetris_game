@@ -4,20 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>테트리스</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style copy.css">
 </head>
 <body>
   <div class="wrapper">
-    <div class="game-text">
-      <span>게임종료</span>
-      <button>다시시작</button>
-    </div>
-    <div class="score">0</div>
-    <div class="playground">
-      <ul></ul>
+    <div class="tetris">
+      <div class="game-text">
+        <span>게임종료</span>
+        <button>다시시작</button>
+      </div>
+      <div class="score-panel">
+        <h2>SCORE</h2>
+        <div class="score-box score">0</div>
+        <h2>LEVEL</h2>
+        <div class="score-box level">1</div>
+        <h2>LINES</h2>
+        <div class="score-box lines">0</div>
+      </div>
+      
+      <div class="playground">
+        <ul></ul>
+      </div>
     </div>
   </div>
-  <!-- import 및 export 문법은 모듈로 선언된 파일에서만 사용할 수 있기 때문에 type="module" 를 안해주면  Uncaught SyntaxError: Cannot use import statement outside a module (at tetris.js:1:1) 와 같은 오류가 난다. -->
-  <script src="./js/tetris.js" type="module"></script>
+  <script src="./js/tetris copy.js" type="module"></script>
 </body>
 </html>

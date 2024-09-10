@@ -116,25 +116,6 @@ function seizeBlock() {
   checkMatch();
 }
 
-// function checkMatch() {
-//   const childNodes = playground.childNodes;
-//   childNodes.forEach((child) => {
-//     let matched = true;
-//     child.children[0].childNodes.forEach((li) => {
-//       if (!li.classList.contains("seized")) {
-//         matched = false;
-//       }
-//     });
-//     if (matched) {
-//       child.remove();
-//       prependNewLine();
-//       score++;
-//       scoreDisplay.innerText = score;
-//     }
-//   });
-//   generateNewBlock();
-// }
-
 function checkMatch() {
   const childNodes = playground.childNodes;
   let linesCleared = 0; // 한 번에 몇 줄을 지웠는지 기록
