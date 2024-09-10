@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -175,9 +182,9 @@ body::before {
 .tee {
   background: linear-gradient(135deg, #f39c12, #d88710);
 }
-
 /* 게임 종료 텍스트 및 버튼 */
 .game-text {
+  font-family: 'Noto Sans KR', sans-serif;
   display: none;
   justify-content: center;
   align-items: center;
@@ -185,18 +192,57 @@ body::before {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85); /* 더 진한 어둠 효과 */
   left: 0;
   top: 0;
   color: #fff;
-  font-size: 50px;
+  font-size: 48px;
+  z-index: 9999; /* 가장 앞으로 오도록 설정 */
+  animation: fadeIn 0.5s ease-in-out; /* 부드러운 페이드 인 애니메이션 */
 }
 
+/* 게임 종료 메시지 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 다시 시작 버튼 스타일 */
 .game-text > button {
-  padding: 0.5rem 1rem;
+  margin-top: 35px;
+  padding: 15px 30px;
   color: #fff;
-  background: rgb(75, 93, 249);
+  background-color: #3f4ef5;
   border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
-  margin-top: 1rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+.game-text > button:hover {
+  color: #333;
+  background-color: #d5dafb; /* 밝은 빨간색 */
+  transform: scale(1.05); /* 버튼이 살짝 커짐 */
+}
+
+/* 버튼을 누를 때 효과 */
+.game-text > button:active {
+  transform: scale(0.95); /* 버튼이 작아지며 눌린 효과 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 게임 종료 텍스트 스타일 */
+.game-text span {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5); /* 텍스트에 그림자 추가 */
 }
